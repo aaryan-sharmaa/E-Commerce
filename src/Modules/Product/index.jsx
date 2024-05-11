@@ -16,6 +16,33 @@ function ProductView() {
     fetchProduct();
   }, []);
 
+  const handleCart = (product, redirect) => {
+    console.log(product);
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const isProductExist = cart.find((item) => item.id === product.id);
+    if (isProductExist) {
+      const updatedCart = cart.map((item) => {
+        if (item.id === product.id) {
+          return {
+            ...item,
+            quantity: item.quantity + 1,
+          };
+        }
+        return item;
+      });
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+    } else {
+      localStorage.setItem(
+        "cart",
+        JSON.stringify([...cart, { ...product, quantity: 1 }])
+      );
+    }
+    alert("Product added to cart!")
+    if (redirect) {
+      navigate("/cart");
+    }
+  };
+
   {
     if (!Object.keys(product).length > 0) return <div>Loading.....</div>;
   }
@@ -172,10 +199,16 @@ function ProductView() {
                 ${product?.price}
               </span>
               <div className="flex">
-                <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded mr-3">
+                <button
+                  className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded mr-3"
+                  onClick={() => handleCart(product, true)}
+                >
                   Buy now
                 </button>
-                <button className="flex ml-auto border border-indigo-500 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded hover:text-white">
+                <button
+                  className="flex ml-auto border border-indigo-500 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded hover:text-white"
+                  onClick={() => handleCart(product)}
+                >
                   Add to cart
                 </button>
               </div>
