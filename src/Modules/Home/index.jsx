@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../../Components/Hero";
-import Product from "../../Components/Products";
+import Product from "../../Components/ProductCard";
 import StatCard from "../../Components/Statstics";
+import ProductCard from "../../Components/ProductCard";  
+import Categories from "../../Components/Categories";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -18,6 +20,7 @@ function Home() {
   return (
     <>
       <Hero />
+      <Categories />  
       <div className="flex flex-col text-center w-full mt-20">
         <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1 ">
           PRODUCTS
@@ -27,7 +30,7 @@ function Home() {
         </h1>
       </div>
       {products.length > 0 ? (
-        <Product products={products} />
+        <ProductCard products={products} />
       ) : (
         <div>Loading.....</div>
       )}

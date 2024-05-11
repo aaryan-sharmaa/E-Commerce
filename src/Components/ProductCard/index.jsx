@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Product({ products = [] }) {
+function ProductCard({ products = [] }) {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font"> 
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap -m-4">
           {products.map((product) => {
@@ -36,4 +36,4 @@ function Product({ products = [] }) {
   );
 }
 
-export default Product;
+export default ProductCard;
