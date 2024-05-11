@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../../Components/Hero";
 import Product from "../../Components/Products";
 import StatCard from "../../Components/Statstics";
 
 
 function Home() {
+
+    useEffect(() => {
+
+    }, []) 
+
   return (
     <>
       <Hero />
