@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function FeatureCard({cards = [1,2,3]}) {
   return (
@@ -15,7 +16,7 @@ function FeatureCard({cards = [1,2,3]}) {
         <div class="flex flex-wrap -m-4">
           {cards?.map((card) => {
             return (
-              <div class="p-4 md:w-1/3">
+              <Link to={`/categories/${card}`} class="p-4 md:w-1/3 cursor-pointer">
                 <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
                   <div class="flex items-center mb-3">
                     <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
@@ -56,7 +57,7 @@ function FeatureCard({cards = [1,2,3]}) {
                     </a>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

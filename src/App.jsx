@@ -6,6 +6,7 @@ import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
 import ProductView from "./Modules/Product";
 import Products from "./Modules/Products";
+import CategoryProducts from "./Modules/CategoryProducts";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products/:id" element={<ProductView/>} />
         <Route path="/products" element={<Products/>} />
+        <Route path="/categories/:name" element={<CategoryProducts/>} />
         <Route path="*" element={<div>404</div>}/>
       </Routes>
       <Footer />
