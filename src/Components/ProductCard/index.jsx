@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function ProductCard({ products = [] }) {
   return (
     <section className="text-gray-600 body-font"> 
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-20 mx-auto">
         <div className="flex flex-wrap -m-4">
         {/* Map through the products array and render a Link component for each product */}
           {products.map((product) => {
