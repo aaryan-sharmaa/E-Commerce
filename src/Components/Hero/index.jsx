@@ -21,7 +21,7 @@ function Hero() {
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
           <img
             className="object-cover object-center rounded"
-            alt="hero"
+            alt="sale "
             src="\src\assets\pexels-karolina-grabowska-5632386.jpg"
           />
         </div>
