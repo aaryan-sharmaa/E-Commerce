@@ -22,7 +22,7 @@ function Hero() {
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="https://dummyimage.com/720x600"
+            src="\src\assets\pexels-karolina-grabowska-5632386.jpg"
           />
         </div>
       </div>
