@@ -21,7 +21,7 @@ function Footer() {
             <span className="ml-3 text-xl">FakeStore</span>
           </a>
           <p className="mt-2 text-sm text-gray-500">
-          Your most unhappy customers are your greatest source of learning
+            Your most unhappy customers are your greatest source of learning
           </p>
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
@@ -31,35 +31,20 @@ function Footer() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <a className="text-gray-600 hover:text-gray-800">Electronics</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <a className="text-gray-600 hover:text-gray-800">Jewelery</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                <a className="text-gray-600 hover:text-gray-800">
+                  Men's Clothing
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
-              </li>
-            </nav>
-          </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
-            </h2>
-            <nav className="list-none mb-10">
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
-              </li>
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
-              </li>
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
-              </li>
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                <a className="text-gray-600 hover:text-gray-800">
+                  Women's Clothing
+                </a>
               </li>
             </nav>
           </div>
@@ -69,16 +54,20 @@ function Footer() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <a className="text-gray-600 hover:text-gray-800">Electronics</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <a className="text-gray-600 hover:text-gray-800">Jewelery</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                <a className="text-gray-600 hover:text-gray-800">
+                  Men's Clothing
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                <a className="text-gray-600 hover:text-gray-800">
+                  Women's Clothing
+                </a>
               </li>
             </nav>
           </div>
@@ -88,16 +77,43 @@ function Footer() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <a className="text-gray-600 hover:text-gray-800">Electronics</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <a className="text-gray-600 hover:text-gray-800">Jewelery</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                <a className="text-gray-600 hover:text-gray-800">
+                  Men's Clothing
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                <a className="text-gray-600 hover:text-gray-800">
+                  Women's Clothing
+                </a>
+              </li>
+            </nav>
+          </div>
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+              CATEGORIES
+            </h2>
+            <nav className="list-none mb-10">
+              <li>
+                <a className="text-gray-600 hover:text-gray-800">Electronics</a>
+              </li>
+              <li>
+                <a className="text-gray-600 hover:text-gray-800">Jewelery</a>
+              </li>
+              <li>
+                <a className="text-gray-600 hover:text-gray-800">
+                  Men's Clothing
+                </a>
+              </li>
+              <li>
+                <a className="text-gray-600 hover:text-gray-800">
+                  Women's Clothing
+                </a>
               </li>
             </nav>
           </div>
