@@ -1,4 +1,5 @@
 import React from "react";
+import Search from "../Search";
 
 function Hero() {
   return (
@@ -14,12 +15,7 @@ function Hero() {
           Don’t forget about those people who have spent their hard-earned money with you. They could be responsible for substantial online sales later down the line. Treat them like your family and take them with you on your journey.
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-              Button
-            </button>
-            <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-              Button
-            </button>
+            <Search />
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">

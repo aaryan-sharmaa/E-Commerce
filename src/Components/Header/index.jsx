@@ -26,7 +26,7 @@ function Header() {
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link
           to={"/"}
-          className="flex title-font cursor-pointer font-medium items-center text-gray-900 mb-4 md:mb-0"
+          className="flex title-font cursor-pointer font-medium items-center text-gray-900 md:mb-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ function Header() {
             );
           })}
         </nav>
-        <Link to={' '} className="inline-flex items-center text-white bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-700 rounded text-base mt-4 md:mt-0">
+        <Link to={'/cart'} className="inline-flex items-center text-white bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-700 rounded text-base mt-4 md:mt-0">
           Go to Cart
           <svg
             fill="none"
