@@ -34,8 +34,8 @@ function Home() {
       ) : (
         <div>Loading.....</div>
       )}
-      <Product />
       <StatCard />
+      <Product />
     </>
   );
 }
