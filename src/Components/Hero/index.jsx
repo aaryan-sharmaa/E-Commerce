@@ -22,7 +22,7 @@ function Hero() {
           <img
             className="object-cover object-center rounded"
             alt="sale "
-            src={"https://github.com/aaryan-sharmaa/internship-assignment/blob/337b9336f11fe3d04a3e4e8924b02a8206f2a69f/src/assets/pexels-karolina-grabowska-5632386.jpg"}
+            src={"src/assets/pexels-karolina-grabowska-5632386.jpg"}
           />
         </div>
       </div>
