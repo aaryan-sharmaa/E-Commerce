@@ -6,12 +6,15 @@ import ProductCard from "../../Components/ProductCard";
 import Categories from "../../Components/Categories";
 
 function Home() {
+  // Initialize an empty array to store products
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchProducts = async () => {
+      // Fetch products from API with a limit of 12
       let response = await fetch("https://fakestoreapi.com/products?limit=12");
       const data = await response.json();
       console.log(data);
+      // Update the products state with the fetched data
       setProducts(data);
     };
     fetchProducts();
@@ -29,6 +32,7 @@ function Home() {
           MOST POPULAR PRODUCTS
         </h1>
       </div>
+      {/* Conditionally render ProductCard or a loading message */}
       {products.length > 0 ? (
         <ProductCard products={products} />
       ) : (

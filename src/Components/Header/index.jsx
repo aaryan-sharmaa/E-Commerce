@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Define an array of navigation items
 const navigations = [
   {
     name: "Home",
@@ -42,7 +43,9 @@ function Header() {
           </svg>
           <span className="ml-3 text-xl">FakeStore</span>
         </Link>
+        {/* Navigation menu */}
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        {/* Map over navigation items and render links */}
           {navigations.map((navigation) => {
             return (
               <Link to={navigation.path} className="mr-5 hover:text-gray-900">

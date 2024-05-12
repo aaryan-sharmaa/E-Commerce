@@ -3,16 +3,20 @@ import ProductCard from "../../Components/ProductCard";
 import Categories from "../../Components/Categories";
 
 function Products() {
+  // Initialize state to store the products, initially an empty array
   const [products, setProducts] = useState([]);
+  // Use the useEffect hook to fetch products when the component mounts
   useEffect(() => {
     const fetchProducts = async () => {
+      // Fetch products from the API
       let response = await fetch("https://fakestoreapi.com/products/");
+      // Parse the response as JSON
       const data = await response.json();
       console.log(data);
       setProducts(data);
     };
     fetchProducts();
-  }, []);
+  }, []); // Dependency array is empty, so the effect only runs once on mount
 
   return (
     <div>
@@ -25,6 +29,7 @@ function Products() {
           ALL PRODUCTS
         </h1>
       </div>
+      {/* Conditionally render the ProductCard component or a loading message */}
       {products.length > 0 ? (
         <ProductCard products={products} />
       ) : (

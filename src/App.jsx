@@ -13,12 +13,12 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
+       <Routes>  {/* Define routes for the application */}
         <Route path="/" element={<Home />} />
         <Route path="/products/:id" element={<ProductView />} />
         <Route path="/products" element={<Products />} />
         <Route path="/categories/:name" element={<CategoryProducts />} />
-        <Route path="*" element={<div>404</div>} />
+        <Route path="*" element={<div>404</div>} />  {/* Define route for 404 error page */}
         <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />

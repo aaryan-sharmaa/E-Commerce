@@ -14,8 +14,10 @@ function FeatureCard({ cards = [1, 2, 3] }) {
           </h1>
         </div>
         <div class="flex flex-wrap -m-4">
+        {/* Map over the cards array and render a Link component for each card */}
           {cards?.map((card) => {
             return (
+              // Define a Link component with a route to `/categories/${card}`
               <Link
                 to={`/categories/${card}`}
                 class="p-4 md:w-1/3 cursor-pointer"

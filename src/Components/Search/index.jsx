@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 
+// Define a Search component that receives a handleSearch function as a prop
 function Search({ handleSearch }) {
+  // Initialize the searchTerm state variable with an empty string
   const [searchTerm, setSearchTerm] = useState("");
 
+  // Define a function to handle input changes
   const handleInputChange = (event) => {
+    // Update the searchTerm state variable with the new input value
     setSearchTerm(event.target.value);
   };
 
+  // Define a function to handle form submission
   const handleFormSubmit = (event) => {
+    // Prevent the default form submission behavior
     event.preventDefault();
+    // Call the handleSearch function with the current searchTerm
     handleSearch(searchTerm);
   };
-
   return (
     <form className="form relative" onSubmit={handleFormSubmit}>
       <button className="absolute left-2 -translate-y-1/2 top-1/2 p-1">
@@ -41,6 +47,8 @@ function Search({ handleSearch }) {
         value={searchTerm}
         onChange={handleInputChange}
       />
+      {/* Add a reset button */}
+
       <button
         type="reset"
         className="absolute right-3 -translate-y-1/2 top-1/2 p-1"

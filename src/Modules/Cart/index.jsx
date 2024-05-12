@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 function Cart() {
+  // Use the useNavigate hook to navigate to different pages
   const navigate = useNavigate();
+  // Use the useState hook to create a state variable for the total price
   const [total, setTotal] = useState(0);
+   // Get the cart data from local storage
   const carts = JSON.parse(localStorage.getItem("cart")) || [];
 
+   // Use the useEffect hook to calculate the total price when the cart data changes
   useEffect(() => {
     const total = carts.reduce((acc, item) => {
       return acc + item.price * item.quantity;
@@ -13,6 +17,7 @@ function Cart() {
     setTotal(total);
   }, [carts]);
 
+// Define a function to increase the quantity of a product in the cart
   const handleInc = (id) => {
     const updatedCart = carts.map((item) => {
       if (item.id === id) {
@@ -27,6 +32,7 @@ function Cart() {
     navigate("/cart");
   };
 
+  // Define a function to decrease the quantity of a product in the cart
   const handleDec = (id) => {
     const updatedCart = carts.map((item) => {
       if (item.id === id) {
@@ -41,12 +47,15 @@ function Cart() {
     navigate("/cart");
   };
 
+
+   // Define a function to remove a product from the cart
   const removeProduct = (id) => {
     const updatedCart = carts.filter((item) => item.id !== id);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     navigate("/cart");
   };
 
+  // Check if the cart is empty
   if (carts.length === 0) {
     return (
       <div className=" h-[55vh] flex justify-center items-center text-4xl ">

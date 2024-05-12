@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 function ProductView() {
+  // Destructure the id from the route parameters
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  // Destructure the id from the route parameters
   console.log(id, "id", product);
 
   useEffect(() => {
@@ -16,10 +18,14 @@ function ProductView() {
     fetchProduct();
   }, []);
 
+  // Define a function to handle adding the product to the cart
   const handleCart = (product, redirect) => {
     console.log(product);
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Check if the product already exists in the cart
     const isProductExist = cart.find((item) => item.id === product.id);
+    // If the product exists in the cart, increment its quantity
     if (isProductExist) {
       const updatedCart = cart.map((item) => {
         if (item.id === product.id) {
@@ -30,13 +36,18 @@ function ProductView() {
         }
         return item;
       });
+
+      // Update the cart in local storage
       localStorage.setItem("cart", JSON.stringify(updatedCart));
     } else {
+      // If the product does not exist in the cart, add it with a quantity of 1
       localStorage.setItem(
         "cart",
         JSON.stringify([...cart, { ...product, quantity: 1 }])
       );
     }
+
+    // Alert the user that the product has been added to the cart
     alert("Product added to cart!")
     if (redirect) {
       navigate("/cart");
@@ -44,9 +55,11 @@ function ProductView() {
   };
 
   {
+    // If the product state is empty, return a loading message
     if (!Object.keys(product).length > 0) return <div>Loading.....</div>;
   }
 
+  // Return the JSX for the product view
   return (
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto text-start">
